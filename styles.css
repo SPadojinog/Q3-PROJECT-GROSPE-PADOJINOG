@@ -1,1 +1,95 @@
+.header{
+    margin: 0;
+    padding: 20% ;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: "Sour Gummy", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Manila_LRT-MRT_map.png/1200px-Manila_LRT-MRT_map.png);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    font-family: "Chango", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 20px;
+    background-color: #4B164C;
+}
+}
+
+.logo {
+    width: 50px; 
+    height: auto;
+    align-items:left;
+}
+
+.centered-heading {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.navbar {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    color: black;
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navbar a:hover {
+    background-color: #4B164C;
+    color: white;
+    list-style: none;
+    list-style-type: none;
+} 
+
+#train-guide {
+    width: 70%;
+    height: 30%;
+    background-color: #f0f0f0; 
+    margin: 10px auto; 
+    margin-bottom:10px;
+    padding: 15px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px; 
+    list-style: none;
+}
+
+h3 {
+    text-align: center;
+}
+
+.schedule.html {
+    background-image:url(https://i.pinimg.com/474x/35/2d/13/352d136d3725126ddd94a7a660300ef9.jpg);
+}
+
+footer {
+  background-color: #A31D1D;
+  padding: 25px;
+  text-align: center;
+  color: white;
+}
+
+.shadow-box {
+    width: 40%;
+    height: 60%;
+    background-color: #f0f0f0; 
+    margin: 10px auto; 
+    padding: 20px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px; 
+}
