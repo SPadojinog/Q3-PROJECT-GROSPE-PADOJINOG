@@ -11,7 +11,7 @@ body {
     font-style: normal;
     font-variation-settings:
     "wdth" 100;
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Manila_LRT-MRT_map.png/1200px-Manila_LRT-MRT_map.png);
+    background-image: url(https://i.pinimg.com/474x/35/2d/13/352d136d3725126ddd94a7a660300ef9.jpg);
 }
 
 header {
@@ -73,23 +73,141 @@ h3 {
     text-align: center;
 }
 
-.schedule.html {
-    background-image:url(https://i.pinimg.com/474x/35/2d/13/352d136d3725126ddd94a7a660300ef9.jpg);
-}
 
 footer {
-  background-color: #A31D1D;
+  background-color: #4B164C;
   padding: 25px;
   text-align: center;
   color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 .shadow-box {
     width: 40%;
     height: 60%;
     background-color: #f0f0f0; 
-    margin: 10px auto; 
+    margin: 20px auto; 
     padding: 20px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); 
     border-radius: 10px; 
 }
+
+.Identification {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    background-color: #4B164C;
+}
+
+tbody {
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    margin: auto; 
+    border-collapse: collapse;
+}
+
+.row-1 {
+    background-color: #EBE8DB;
+}
+.row-2 {
+    background-color:#4B164C; 
+    color: white;
+}
+.row-3 {
+    background-color: #EBE8DB; 
+}
+.row-4 {
+    background-color: #4B164C;
+    color: white;
+}
+.row-5 {
+    background-color: #EBE8DB;
+}
+.row-6 {
+    background-color: #4B164C;
+    color: white;
+}
+.row-7 {
+    background-color: #EBE8DB;
+}
+.row-8 {
+    background-color: #4B164C;
+    color: white;
+}
+.row-9 {
+    background-color: #EBE8DB;
+}
+.row-10 {
+    background-color: #4B164C;
+    color: white;
+}
+.row-11 {
+    background-color: #EBE8DB;
+}
+.row-12 {
+    background-color: #4B164C;
+    color: white;
+}
+
+.container-mt-3 {
+    display: flex;
+}
+
+#lrt1 {
+    width: 70%;
+    height: 30%;
+    background-color: #f0f0f0; 
+    margin: 3px auto; 
+    margin-bottom:10px;
+    padding: 15px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px; 
+    list-style: none;
+}
+
+h2 {
+    padding:10px;
+    background-color:#4B164C;
+    color: white;
+    text-align: center;
+}
+.train-box {
+    width: 20%;
+    height: 30%;
+    background-color: #f0f0f0; 
+    margin-left: 127px;
+    margin-right: 40px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px; 
+    text-align: center;
+    display: inline-block;
+    align-items: center;
+    list-style:none;
+    img: 100px;
+    font-family: "Sour Gummy", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+}
+        .train-box img {
+            width: 200px;
+            height: 225px;
+        }
+
+        .train-box a {
+            display: block;
+            margin-top: 10px;
+        }
