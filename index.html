@@ -6,7 +6,12 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Chango&family=Chewy&family=DynaPuff:wght@400..700&family=Kaushan+Script&family=Kirang+Haerang&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&family=Rubik+Wet+Paint&family=Sofadi+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Chango&family=Chewy&family=DynaPuff:wght@400..700&family=Kaushan+Script&family=Kings&family=Kirang+Haerang&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&family=Petrona:ital,wght@0,100..900;1,100..900&family=Rubik+Wet+Paint&family=Sofadi+One&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Chango&family=Chewy&family=DynaPuff:wght@400..700&family=Kaushan+Script&family=Kings&family=Kirang+Haerang&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Caslon+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&family=Petrona:ital,wght@0,100..900;1,100..900&family=Rubik+Wet+Paint&family=Sofadi+One&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,19 +21,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="styles.css"> 
     <title>Q3 Project</title>
-    
-    <style>
-    body {
-         background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Manila_LRT-MRT_map.png/1200px-Manila_LRT-MRT_map.png);
-    }
-    </style>
 </head>
 <body>
 
 <!-- NAVIGATION BAR: SOFIA -->
     <header>
-        <img src="https://i.pinimg.com/736x/94/eb/ba/94ebba0f32f8fdf45a210eb55eab3a83.jpg" alt="Logo" class="logo rounded-circle" width="50px" length="70px">
-        <h1 class="centered-heading">ITTY BITTY TRACKERS</h1>
+        <img src="https://i.pinimg.com/736x/32/61/51/326151c79eacdd3d38020c76ca249923.jpg" alt="Logo" class="logo rounded-circle" width="50px" length="70px">
+        <h1 class="centered-heading">OBMC EXPRESSWAY GUIDE</h1>
     </header>
 
     <nav class="navbar navbar-expand-sm bg-light">
@@ -53,11 +52,54 @@
 <!-- FARE GUIDE: JILL -->
     <div class="row sm" id="train-guide">
         <h3> TRAIN FARE GUIDE </h3> <br />
-        <div class="col-sm-3 d-flex justify-content-center align-items-center">
-            <p>TICKET PRICE:</p>
+        <div class="col-sm-4 d-flex justify-content-center align-items-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Manila_LRT-MRT_map.png" height="380" width="350" alt="map">
         </div>
-        <div class="col-sm-5">
-            <!-- Additional content can go here if necessary -->
+        <div class="col-sm-4">
+            <label for="departure">Select Departure Station:</label> <br />
+                <select id="departure">
+                    <option value="Antipolo">Antipolo</option>
+                    <option value="Marikina">Marikina</option>
+                    <option value="Santolan">Santolan</option>
+                    <option value="Katipunan">Katipunan</option>
+                    <option value="Anonas">Anonas</option>
+                    <option value="Cubao">Cubao</option>
+                    <option value="Betty-Go">Betty-Go</option>
+                    <option value="Gilmore">Gilmore</option>
+                    <option value="J. Ruiz">J. Ruiz</option>
+                    <option value="V. Mapa">V. Mapa</option>
+                    <option value="Pureza">Pureza</option>
+                    <option value="Legarda">Legarda</option>
+                    <option value="Recto">Recto</option>
+                </select> <br /> 
+
+            <label for="arrival">Select Arrival Station:</label> <br />
+                <select id="arrival">
+                    <option value="Antipolo">Antipolo</option>
+                    <option value="Marikina">Marikina</option>
+                    <option value="Santolan">Santolan</option>
+                    <option value="Katipunan">Katipunan</option>
+                    <option value="Anonas">Anonas</option>
+                    <option value="Cubao">Cubao</option>
+                    <option value="Betty-Go">Betty-Go</option>
+                    <option value="Gilmore">Gilmore</option>
+                    <option value="J. Ruiz">J. Ruiz</option>
+                    <option value="V. Mapa">V. Mapa</option>
+                    <option value="Pureza">Pureza</option>
+                    <option value="Legarda">Legarda</option>
+                    <option value="Recto">Recto</option>
+                </select> <br />
+
+                <select id="discount" placeholder="DISCOUNT">
+                    <option value="none">None</option>
+                    <option value="student">Student (10% off)</option>
+                    <option value="senior">Senior Citizen (20% off)</option>
+                    <option value="PWD">PWD (30% off)</option>
+                </select>
+
+            <button onclick="calculateFare()">Regular Fare</button>
+
+            <h2 id="fare"></h2>
         </div>
         <div class="col-sm-4 d-flex justify-content-center align-items-center">
             <img src="https://upload.wikimedia.org/wikipedia/en/7/73/Beep_regular_card.png" height="380" width="350" alt="beep">
@@ -68,5 +110,68 @@
         <p>     &#169; 9 - Sapphire | Sofia Laurence F. Padojinog - Jillian C. Grospe</p>
     </footer>
 
+    <script>
+        const fares = {
+            "Antipolo": {
+                "Marikina": 5,
+                "Santolan": 8,
+                "Katipunan": 8,
+                "Anonas": 8,
+                "Cubao": 8,
+                "Betty-Go": 8,
+                "Gilmore": 8,
+                "J. Ruiz": 8,
+                "V. Mapa": 8,
+                "Pureza": 8,
+                "Legarda": 8,
+                "Recto": 8,
+            }
+            "Marikina": {
+                "Antipolo": 8,
+                "Santolan": 8,
+                "Katipunan": 8,
+                "Anonas": 8,
+                "Cubao": 8,
+                "Betty-Go": 8,
+                "Gilmore": 8,
+                "J. Ruiz": 8,
+                "V. Mapa": 8,
+                "Pureza": 8,
+                "Legarda": 8,
+                "Recto": 8,
+            },
+            "stationC": {
+                "stationA": 8,
+                "stationB": 6
+            }
+        };
+
+        function calculateFare() {
+            const departure = document.getElementById('departure').value;
+            const arrival = document.getElementById('arrival').value;
+            const discountType = document.getElementById('discount').value;
+
+            if (departure === arrival) {
+                document.getElementById('fare').textContent = "You are already at your destination!";
+                return;
+
+            let discount = 0;
+
+            if (discountType === 'student') {
+                discount = 0.10; 
+            } else if (discountType === 'senior') {
+                discount = 0.20; 
+            }
+            } else if (discountType === 'PWD') {
+                discount = 0.30; 
+            }
+
+            // Apply discount
+            const discountedFare = baseFare * (1 - discount);
+
+            const fare = fares[departure][arrival];
+            document.getElementById('fare').textContent = `The fare from ${departure} to ${arrival} is $${fare}.`;
+        }
+    </script>
 </body>
 </html>
