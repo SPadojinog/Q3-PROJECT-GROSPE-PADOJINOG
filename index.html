@@ -58,58 +58,111 @@
     </div>
     <div class="col-sm-4">
         <form>
-            <label for="departure">Select Departure Station:</label> <br />
-            <input list="leave" id="departure" name="departure" placeholder="Type or select">
-            <datalist id="leave">
-                <option value="Antipolo">
-                <option value="Marikina">
-                <option value="Santolan">
-                <option value="Katipunan">
-                <option value="Anonas">
-                <option value="Cubao">
-                <option value="Betty-Go">
-                <option value="Gilmore">
-                <option value="J. Ruiz">
-                <option value="V. Mapa">
-                <option value="Pureza">
-                <option value="Legarda">
-                <option value="Recto">
-            </datalist> 
-            <br /> 
+                <label for="departure">Select Departure Station:</label> <br />
+                <input list="leave" id="departure" name="departure" placeholder="Type or select">
+                <datalist id="leave">
+                    <option value="Antipolo">
+                    <option value="Marikina">
+                    <option value="Santolan">
+                    <option value="Katipunan">
+                    <option value="Anonas">
+                    <option value="Cubao">
+                    <option value="Betty-Go">
+                    <option value="Gilmore">
+                    <option value="J. Ruiz">
+                    <option value="V. Mapa">
+                    <option value="Pureza">
+                    <option value="Legarda">
+                    <option value="Recto">
+                </datalist> 
+                <br /><br />
 
-            <label for="arrival">Select Arrival Station:</label> <br />
-            <input list="destination" id="arrival" name="arrival" placeholder="Type or select">
-            <datalist id="destination">
-                <option value="Antipolo">
-                <option value="Marikina">
-                <option value="Santolan">
-                <option value="Katipunan">
-                <option value="Anonas">
-                <option value="Cubao">
-                <option value="Betty-Go">
-                <option value="Gilmore">
-                <option value="J. Ruiz">
-                <option value="V. Mapa">
-                <option value="Pureza">
-                <option value="Legarda">
-                <option value="Recto">
-            </datalist> 
-            <br />
+                <label for="arrival">Select Arrival Station:</label> <br />
+                <input list="destination" id="arrival" name="arrival" placeholder="Type or select">
+                <datalist id="destination">
+                    <option value="Antipolo">
+                    <option value="Marikina">
+                    <option value="Santolan">
+                    <option value="Katipunan">
+                    <option value="Anonas">
+                    <option value="Cubao">
+                    <option value="Betty-Go">
+                    <option value="Gilmore">
+                    <option value="J. Ruiz">
+                    <option value="V. Mapa">
+                    <option value="Pureza">
+                    <option value="Legarda">
+                    <option value="Recto">
+                </datalist> 
+                <br /><br />
 
-            <label for="discount">Select Discount:</label> <br />
-            <input list="fare" id="discount" name="discount" placeholder="Type or select">
-            <datalist id="fare">
-                <option value="None">
-                <option value="Student (10% off)">
-                <option value="Senior Citizen (20% off)">
-                <option value="PWD (30% off)">
-            </datalist> 
-            <br />
+                <label for="discount">Select Discount:</label> <br />
+                <input list="fare" id="discount" name="discount" placeholder="Type or select">
+                <datalist id="fare">
+                    <option value="None">
+                    <option value="Student (10% off)">
+                    <option value="Senior Citizen (20% off)">
+                    <option value="PWD (30% off)">
+                </datalist> 
+                <br /><br />
 
-            <button type="button" id="calculatePrice" onclick="calculateFare()">Calculate Fare</button>
-        </form>
+                <button type="button" id="calculatePrice">Calculate Fare</button>
+            </form>
     </div>
 </div>
+
+<script type="text/javascript">
+    const fares = {
+    "Antipolo": { "Marikina": 5, "Santolan": 8, "Katipunan": 10, "Anonas": 12, "Cubao": 15, "Betty-Go": 17, "Gilmore": 18, "J. Ruiz": 19, "V. Mapa": 20, "Pureza": 21, "Legarda": 22, "Recto": 23 },
+    "Marikina": { "Antipolo": 5, "Santolan": 5, "Katipunan": 7, "Anonas": 9, "Cubao": 12, "Betty-Go": 14, "Gilmore": 15, "J. Ruiz": 16, "V. Mapa": 17, "Pureza": 18, "Legarda": 19, "Recto": 20 },
+    "Santolan": { "Antipolo": 8, "Marikina": 5, "Katipunan": 5, "Anonas": 7, "Cubao": 10, "Betty-Go": 12, "Gilmore": 13, "J. Ruiz": 14, "V. Mapa": 15, "Pureza": 16, "Legarda": 17, "Recto": 18 },
+    "Katipunan": { "Antipolo": 10, "Marikina": 7, "Santolan": 5, "Anonas": 5, "Cubao": 7, "Betty-Go": 9, "Gilmore": 10, "J. Ruiz": 11, "V. Mapa": 12, "Pureza": 13, "Legarda": 14, "Recto": 15 },
+    "Anonas": { "Antipolo": 12, "Marikina": 9, "Santolan": 7, "Katipunan": 5, "Cubao": 6, "Betty-Go": 8, "Gilmore": 9, "J. Ruiz": 10, "V. Mapa": 11, "Pureza": 12, "Legarda": 13, "Recto": 14 },
+    "Cubao": { "Antipolo": 15, "Marikina": 12, "Santolan": 10, "Katipunan": 7, "Anonas": 6, "Betty-Go": 5, "Gilmore": 6, "J. Ruiz": 7, "V. Mapa": 8, "Pureza": 9, "Legarda": 10, "Recto": 11 },
+    "Betty-Go": { "Antipolo": 17, "Marikina": 14, "Santolan": 12, "Katipunan": 9, "Anonas": 8, "Cubao": 5, "Gilmore": 5, "J. Ruiz": 6, "V. Mapa": 7, "Pureza": 8, "Legarda": 9, "Recto": 10 },
+    "Gilmore": { "Antipolo": 18, "Marikina": 15, "Santolan": 13, "Katipunan": 10, "Anonas": 9, "Cubao": 6, "Betty-Go": 5, "J. Ruiz": 5, "V. Mapa": 6, "Pureza": 7, "Legarda": 8, "Recto": 9 },
+    "J. Ruiz": { "Antipolo": 19, "Marikina": 16, "Santolan": 14, "Katipunan": 11, "Anonas": 10, "Cubao": 7, "Betty-Go": 6, "Gilmore": 5, "V. Mapa": 5, "Pureza": 6, "Legarda": 7, "Recto": 8 },
+    "V. Mapa": { "Antipolo": 20, "Marikina": 17, "Santolan": 15, "Katipunan": 12, "Anonas": 11, "Cubao": 8, "Betty-Go": 7, "Gilmore": 6, "J. Ruiz": 5, "Pureza": 5, "Legarda": 6, "Recto": 7 },
+    "Pureza": { "Antipolo": 21, "Marikina": 18, "Santolan": 16, "Katipunan": 13, "Anonas": 12, "Cubao": 9, "Betty-Go": 8, "Gilmore": 7, "J. Ruiz": 6, "V. Mapa": 5, "Legarda": 5, "Recto": 6 },
+    "Legarda": { "Antipolo": 22, "Marikina": 19, "Santolan": 17, "Katipunan": 14, "Anonas": 13, "Cubao": 10, "Betty-Go": 9, "Gilmore": 8, "J. Ruiz": 7, "V. Mapa": 6, "Pureza": 5, "Recto": 5 },
+    "Recto": { "Antipolo": 23, "Marikina": 20, "Santolan": 18, "Katipunan": 15, "Anonas": 14, "Cubao": 11, "Betty-Go": 10, "Gilmore": 9, "J. Ruiz": 8, "V. Mapa": 7, "Pureza": 6, "Legarda": 5 }
+};
+
+function calculateFare() {
+    const departure = document.getElementById('departure').value.trim();
+    const arrival = document.getElementById('arrival').value.trim();
+    const discountType = document.getElementById('discount').value.trim();
+
+    if (departure === arrival) {
+        alert("You are already at your destination!");
+        return;
+    }
+
+    if (!fares[departure] || !fares[departure][arrival]) {
+        alert("No fare data available for this route.");
+        return;
+    }
+
+    let baseFare = fares[departure][arrival];
+    let discount = 0;
+
+    if (discountType.includes("Student")) {
+        discount = 0.10;
+    } else if (discountType.includes("Senior")) {
+        discount = 0.20;
+    } else if (discountType.includes("PWD")) {
+        discount = 0.30;
+    }
+
+    let finalFare = baseFare - (baseFare * discount);
+    
+    alert("Ticket Price: ₱" + finalFare.toFixed(2));
+}
+
+// Attach event listener properly
+document.getElementById("calculatePrice").addEventListener("click", calculateFare);
+
+</script>
 
         <h2 id="fare"></h2>
     </div>
@@ -122,6 +175,5 @@
         <p>     &#169; 9 - Sapphire | Sofia Laurence F. Padojinog - Jillian C. Grospe</p>
     </footer>
 
-    <script href="main.js"> </script>
 </body>
 </html>
