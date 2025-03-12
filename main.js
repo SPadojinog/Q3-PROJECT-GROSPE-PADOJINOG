@@ -1,61 +1,66 @@
 const fares = {
-            "Antipolo": {
-                "Marikina": 5,
-                "Santolan": 8,
-                "Katipunan": 8,
-                "Anonas": 8,
-                "Cubao": 8,
-                "Betty-Go": 8,
-                "Gilmore": 8,
-                "J. Ruiz": 8,
-                "V. Mapa": 8,
-                "Pureza": 8,
-                "Legarda": 8,
-                "Recto": 8,
-            }
-            "Marikina": {
-                "Antipolo": 8,
-                "Santolan": 8,
-                "Katipunan": 8,
-                "Anonas": 8,
-                "Cubao": 8,
-                "Betty-Go": 8,
-                "Gilmore": 8,
-                "J. Ruiz": 8,
-                "V. Mapa": 8,
-                "Pureza": 8,
-                "Legarda": 8,
-                "Recto": 8,
-            },
-            "stationC": {
-                "stationA": 8,
-                "stationB": 6
-            }
-        };
+    "Antipolo": {
+        "Marikina": 5,
+        "Santolan": 8,
+        "Katipunan": 10,
+        "Anonas": 12,
+        "Cubao": 15,
+        "Betty-Go": 17,
+        "Gilmore": 18,
+        "J. Ruiz": 19,
+        "V. Mapa": 20,
+        "Pureza": 21,
+        "Legarda": 22,
+        "Recto": 23
+    },
+    "Marikina": {
+        "Antipolo": 5,
+        "Santolan": 8,
+        "Katipunan": 10,
+        "Anonas": 12,
+        "Cubao": 15,
+        "Betty-Go": 17,
+        "Gilmore": 18,
+        "J. Ruiz": 19,
+        "V. Mapa": 20,
+        "Pureza": 21,
+        "Legarda": 22,
+        "Recto": 23
+    }
+};
 
-        function calculateFare() {
-            const departure = document.getElementById('departure').value;
-            const arrival = document.getElementById('arrival').value;
-            const discountType = document.getElementById('discount').value;
+function calculateFare() {
+    const departure = document.getElementById('departure').value;
+    const arrival = document.getElementById('arrival').value;
+    const discountType = document.getElementById('discount').value;
 
-            if (departure === arrival) {
-                document.getElementById('fare').textContent = "You are already at your destination!";
-                return;
+    // If departure and arrival are the same
+    if (departure === arrival) {
+        document.getElementById('fare').textContent = "You are already at your destination!";
+        return;
+    }
 
-            let discount = 0;
+    // Check if fare exists
+    if (!fares[departure] || !fares[departure][arrival]) {
+        document.getElementById('fare').textContent = "No fare data available for this route.";
+        return;
+    }
 
-            if (discountType === 'student') {
-                discount = 0.10; 
-            } else if (discountType === 'senior') {
-                discount = 0.20; 
-            }
-            } else if (discountType === 'PWD') {
-                discount = 0.30; 
-            }
+    let baseFare = fares[departure][arrival];
+    let discount = 0;
 
-            // Apply discount
-            const discountedFare = baseFare * (1 - discount);
+    // Apply discount based on selection
+    if (discountType === 'student') {
+        discount = 0.10;
+    } else if (discountType === 'senior') {
+        discount = 0.20;
+    } else if (discountType === 'PWD') {
+        discount = 0.30;
+    }
 
-            const fare = fares[departure][arrival];
-            document.getElementById('fare').textContent = `The fare from ${departure} to ${arrival} is $${fare}.`;
-        }
+    // Calculate discounted fare
+    const discountedFare = baseFare * (1 - discount);
+
+    // Display result
+    document.getElementById('fare').textContent = `The fare from ${departure} to ${arrival} is ₱${discountedFare.toFixed(2)}.`;
+}
