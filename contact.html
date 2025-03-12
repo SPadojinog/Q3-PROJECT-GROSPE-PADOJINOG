@@ -69,9 +69,9 @@
                     </div>
 
                     <button type="button" id="submit" onclick="
-                    let name = document.getElementById('name').value;
-                    let email = document.getElementById('email').value;
-                    if (name === '' || email === '') {
+                    let Email = document.getElementById('inputEmail').value;
+                    let PhoneNumber = document.getElementById('inputPhoneNumber').value;
+                    if (inputEmail === '' || inputPhoneNumber === '') {
                         alert('Please fill in all fields before submitting.');
                     } else {
                         alert('Thank you, ' + name + '! Your info has been submitted successfully.');
