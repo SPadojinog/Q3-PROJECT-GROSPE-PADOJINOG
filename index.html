@@ -50,60 +50,66 @@
     </nav>
 
 <!-- FARE GUIDE: JILL -->
-    <div class="row sm" id="train-guide">
-    <h3>TRAIN FARE GUIDE</h3> <br />
+   <div class="row sm" id="train-guide">
+    <h3>TRAIN FARE GUIDE</h3>
+    <br />
     <div class="col-sm-4 d-flex justify-content-center align-items-center">
         <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Manila_LRT-MRT_map.png" height="380" width="350" alt="map">
     </div>
     <div class="col-sm-4">
-    <form>
-        <label for="departure">Select Departure Station:</label> <br />
-        <input list="leave" id="departure" name="departure" placegolder="Type or select">
-        <datalist id="departure">
-            <option value="Antipolo">
-            <option value="Marikina">
-            <option value="Santolan">
-            <option value="Katipunan">
-            <option value="Anonas">
-            <option value="Cubao">
-            <option value="Betty-Go">
-            <option value="Gilmore">
-            <option value="J. Ruiz">
-            <option value="V. Mapa">
-            <option value="Pureza">
-            <option value="Legarda">
-            <option value="Recto">
-        </datalist> <br /> 
+        <form>
+            <label for="departure">Select Departure Station:</label> <br />
+            <input list="leave" id="departure" name="departure" placeholder="Type or select">
+            <datalist id="leave">
+                <option value="Antipolo">
+                <option value="Marikina">
+                <option value="Santolan">
+                <option value="Katipunan">
+                <option value="Anonas">
+                <option value="Cubao">
+                <option value="Betty-Go">
+                <option value="Gilmore">
+                <option value="J. Ruiz">
+                <option value="V. Mapa">
+                <option value="Pureza">
+                <option value="Legarda">
+                <option value="Recto">
+            </datalist> 
+            <br /> 
 
-        <label for="arrival">Select Arrival Station:</label> <br />
-        <input list="destination" id="arrival" name="arrival" placeholder="Type or select">
-        <datalist id="destination">
-            <option value="Antipolo">
-            <option value="Marikina">
-            <option value="Santolan">
-            <option value="Katipunan">
-            <option value="Anonas">
-            <option value="Cubao">
-            <option value="Betty-Go">
-            <option value="Gilmore">
-            <option value="J. Ruiz">
-            <option value="V. Mapa">
-            <option value="Pureza">
-            <option value="Legarda">
-            <option value="Recto">
-        </datalist> <br />
+            <label for="arrival">Select Arrival Station:</label> <br />
+            <input list="destination" id="arrival" name="arrival" placeholder="Type or select">
+            <datalist id="destination">
+                <option value="Antipolo">
+                <option value="Marikina">
+                <option value="Santolan">
+                <option value="Katipunan">
+                <option value="Anonas">
+                <option value="Cubao">
+                <option value="Betty-Go">
+                <option value="Gilmore">
+                <option value="J. Ruiz">
+                <option value="V. Mapa">
+                <option value="Pureza">
+                <option value="Legarda">
+                <option value="Recto">
+            </datalist> 
+            <br />
 
-        <label for="discount">Select Discount:</label> <br />
-        <input list="fare" id="discount" name="discount" placeholder="Type or select>
-        <datalist id="fare">
-            <option value="none">
-            <option value="Student (10% off)">
-            <option value="Senior Citizen (20% off)">
-            <option value="PWD (30% off)">
-        </datalist> <br />
+            <label for="discount">Select Discount:</label> <br />
+            <input list="fare" id="discount" name="discount" placeholder="Type or select">
+            <datalist id="fare">
+                <option value="None">
+                <option value="Student (10% off)">
+                <option value="Senior Citizen (20% off)">
+                <option value="PWD (30% off)">
+            </datalist> 
+            <br />
 
-        <button type="button" id="calculatePrice">Calculate Fare</button>
+            <button type="button" id="calculatePrice" onclick="calculateFare()">Calculate Fare</button>
         </form>
+    </div>
+</div>
 
         <h2 id="fare"></h2>
     </div>
