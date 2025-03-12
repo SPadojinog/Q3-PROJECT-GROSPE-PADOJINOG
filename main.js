@@ -34,22 +34,19 @@ function calculateFare() {
     const arrival = document.getElementById('arrival').value;
     const discountType = document.getElementById('discount').value;
 
-    // If departure and arrival are the same
     if (departure === arrival) {
-        document.getElementById('fare').textContent = "You are already at your destination!";
+        alert("You are already at your destination!");
         return;
     }
 
-    // Check if fare exists
     if (!fares[departure] || !fares[departure][arrival]) {
-        document.getElementById('fare').textContent = "No fare data available for this route.";
+        alert("No fare data available for this route.");
         return;
     }
 
     let baseFare = fares[departure][arrival];
     let discount = 0;
 
-    // Apply discount based on selection
     if (discountType === 'student') {
         discount = 0.10;
     } else if (discountType === 'senior') {
@@ -58,9 +55,7 @@ function calculateFare() {
         discount = 0.30;
     }
 
-    // Calculate discounted fare
     const discountedFare = baseFare * (1 - discount);
-
-    // Display result
-    document.getElementById('fare').textContent = `The fare from ${departure} to ${arrival} is ₱${discountedFare.toFixed(2)}.`;
+    
+    alert(`The fare from ${departure} to ${arrival} is ₱${discountedFare.toFixed(2)}.`);
 }
