@@ -68,7 +68,15 @@
                         <textarea class="form-control" id="FDBK" rows="3" placeholder="Type Here..."></textarea>
                     </div>
 
-                    <button type="submit" class="btn">Submit</button>
+                    <button type="button" id="submit" onclick="
+                    let name = document.getElementById('name').value;
+                    let email = document.getElementById('email').value;
+                    if (name === '' || email === '') {
+                        alert('Please fill in all fields before submitting.');
+                    } else {
+                        alert('Thank you, ' + name + '! Your info has been submitted successfully.');
+                    }
+                ">Submit Info</button>
             </form>
         </div>
     </div>
