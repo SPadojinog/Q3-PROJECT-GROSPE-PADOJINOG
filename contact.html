@@ -45,41 +45,47 @@
     </nav>
 
 <!-- LEAVE A COMMENT: JILL -->
-    <div class="shadow-box">
-        <p> We value your feedback. Talk to us </p>
-    </div>
+   <div class="shadow-box">
+    <p>We value your feedback. Talk to us</p>
+</div>
 
-    <div class="shadow-box">
-        <div class="body">
-            <form>            
-                <div class="mb-3 row">
-                    <div class="col-md-6">
-                        <label for="inputEmail" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="inputPhoneNumber" class="form-label">Phone Number</label>
-                        <input type="tel" class="form-control" id="inputPhoneNumber" placeholder="Enter your Phone Number...">
-                    </div>
+<div class="shadow-box">
+    <div class="body">
+        <form>            
+            <div class="mb-3 row">
+                <div class="col-md-6">
+                    <label for="inputEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email">
                 </div>
-            
-                    <div class="mb-3">
-                        <label for="SOI" class="form-label">Feedback</label>
-                        <textarea class="form-control" id="FDBK" rows="3" placeholder="Type Here..."></textarea>
-                    </div>
+                <div class="col-md-6">
+                    <label for="inputPhoneNumber" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="inputPhoneNumber" placeholder="Enter your Phone Number...">
+                </div>
+            </div>
+        
+            <div class="mb-3">
+                <label for="FDBK" class="form-label">Feedback</label>
+                <textarea class="form-control" id="FDBK" rows="3" placeholder="Type Here..."></textarea>
+            </div>
 
-                    <button type="button" id="submit" onclick="
-                    let Email = document.getElementById('inputEmail').value;
-                    let PhoneNumber = document.getElementById('inputPhoneNumber').value;
-                    if (inputEmail === '' || inputPhoneNumber === '') {
-                        alert('Please fill in all fields before submitting.');
-                    } else {
-                        alert('Thank you, ' + name + '! Your info has been submitted successfully.');
-                    }
-                ">Submit Info</button>
-            </form>
-        </div>
+            <button type="button" id="submit" onclick="submitForm()">Submit Info</button>
+        </form>
     </div>
+</div>
+
+<script>
+    function submitForm() {
+        let email = document.getElementById('inputEmail').value;
+        let phoneNumber = document.getElementById('inputPhoneNumber').value;
+
+        if (email === '' || phoneNumber === '') {
+            alert('Please fill in all fields before submitting.');
+        } else {
+            alert('Thank you! Your info has been submitted successfully.');
+        }
+    }
+</script>
+
 
     <footer>
         <p>     &#169; 9 - Sapphire | Sofia Laurence F. Padojinog - Jillian C. Grospe</p>
