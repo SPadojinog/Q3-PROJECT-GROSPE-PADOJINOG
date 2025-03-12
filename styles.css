@@ -215,7 +215,11 @@ h2 {
 .btn {
     background-color: #000000;
     color:white;
-    width: 570px;
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+    
+    
 }
 select, button {
     padding: 10px;
