@@ -51,60 +51,61 @@
 
 <!-- FARE GUIDE: JILL -->
     <div class="row sm" id="train-guide">
-        <h3> TRAIN FARE GUIDE </h3> <br />
-        <div class="col-sm-4 d-flex justify-content-center align-items-center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Manila_LRT-MRT_map.png" height="380" width="350" alt="map">
-        </div>
-        <div class="col-sm-4">
-            <label for="departure">Select Departure Station:</label> <br />
-                <select id="departure">
-                    <option value="Antipolo">Antipolo</option>
-                    <option value="Marikina">Marikina</option>
-                    <option value="Santolan">Santolan</option>
-                    <option value="Katipunan">Katipunan</option>
-                    <option value="Anonas">Anonas</option>
-                    <option value="Cubao">Cubao</option>
-                    <option value="Betty-Go">Betty-Go</option>
-                    <option value="Gilmore">Gilmore</option>
-                    <option value="J. Ruiz">J. Ruiz</option>
-                    <option value="V. Mapa">V. Mapa</option>
-                    <option value="Pureza">Pureza</option>
-                    <option value="Legarda">Legarda</option>
-                    <option value="Recto">Recto</option>
-                </select> <br /> 
-
-            <label for="arrival">Select Arrival Station:</label> <br />
-                <select id="arrival">
-                    <option value="Antipolo">Antipolo</option>
-                    <option value="Marikina">Marikina</option>
-                    <option value="Santolan">Santolan</option>
-                    <option value="Katipunan">Katipunan</option>
-                    <option value="Anonas">Anonas</option>
-                    <option value="Cubao">Cubao</option>
-                    <option value="Betty-Go">Betty-Go</option>
-                    <option value="Gilmore">Gilmore</option>
-                    <option value="J. Ruiz">J. Ruiz</option>
-                    <option value="V. Mapa">V. Mapa</option>
-                    <option value="Pureza">Pureza</option>
-                    <option value="Legarda">Legarda</option>
-                    <option value="Recto">Recto</option>
-                </select> <br />
-
-                <select id="discount" placeholder="DISCOUNT">
-                    <option value="none">None</option>
-                    <option value="student">Student (10% off)</option>
-                    <option value="senior">Senior Citizen (20% off)</option>
-                    <option value="PWD">PWD (30% off)</option>
-                </select>
-
-            <button onclick="calculateFare()">Regular Fare</button>
-
-            <h2 id="fare"></h2>
-        </div>
-        <div class="col-sm-4 d-flex justify-content-center align-items-center">
-            <img src="https://upload.wikimedia.org/wikipedia/en/7/73/Beep_regular_card.png" height="380" width="350" alt="beep">
-        </div>
+    <h3>TRAIN FARE GUIDE</h3> <br />
+    <div class="col-sm-4 d-flex justify-content-center align-items-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Manila_LRT-MRT_map.png" height="380" width="350" alt="map">
     </div>
+    <div class="col-sm-4">
+        <label for="departure">Select Departure Station:</label> <br />
+        <select id="departure">
+            <option value="Antipolo">Antipolo</option>
+            <option value="Marikina">Marikina</option>
+            <option value="Santolan">Santolan</option>
+            <option value="Katipunan">Katipunan</option>
+            <option value="Anonas">Anonas</option>
+            <option value="Cubao">Cubao</option>
+            <option value="Betty-Go">Betty-Go</option>
+            <option value="Gilmore">Gilmore</option>
+            <option value="J. Ruiz">J. Ruiz</option>
+            <option value="V. Mapa">V. Mapa</option>
+            <option value="Pureza">Pureza</option>
+            <option value="Legarda">Legarda</option>
+            <option value="Recto">Recto</option>
+        </select> <br /> 
+
+        <label for="arrival">Select Arrival Station:</label> <br />
+        <select id="arrival">
+            <option value="Antipolo">Antipolo</option>
+            <option value="Marikina">Marikina</option>
+            <option value="Santolan">Santolan</option>
+            <option value="Katipunan">Katipunan</option>
+            <option value="Anonas">Anonas</option>
+            <option value="Cubao">Cubao</option>
+            <option value="Betty-Go">Betty-Go</option>
+            <option value="Gilmore">Gilmore</option>
+            <option value="J. Ruiz">J. Ruiz</option>
+            <option value="V. Mapa">V. Mapa</option>
+            <option value="Pureza">Pureza</option>
+            <option value="Legarda">Legarda</option>
+            <option value="Recto">Recto</option>
+        </select> <br />
+
+        <label for="discount">Select Discount:</label> <br />
+        <select id="discount">
+            <option value="none">None</option>
+            <option value="student">Student (10% off)</option>
+            <option value="senior">Senior Citizen (20% off)</option>
+            <option value="PWD">PWD (30% off)</option>
+        </select> <br />
+
+        <button onclick="calculateFare()">Calculate Fare</button>
+
+        <h2 id="fare"></h2>
+    </div>
+    <div class="col-sm-4 d-flex justify-content-center align-items-center">
+        <img src="https://upload.wikimedia.org/wikipedia/en/7/73/Beep_regular_card.png" height="380" width="350" alt="beep">
+    </div>
+</div>
 
     <footer>
         <p>     &#169; 9 - Sapphire | Sofia Laurence F. Padojinog - Jillian C. Grospe</p>
